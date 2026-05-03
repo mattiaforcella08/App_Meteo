@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudGuard">
         <activity
+            android:name=".homepage"
+            android:exported="false" />
+        <activity
             android:name=".Avvio"
             android:exported="true">
             <intent-filter>

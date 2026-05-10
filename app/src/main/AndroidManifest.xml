@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudGuard">
         <activity
-            android:name=".homepage"
+            android:name=".Homepage"
             android:exported="false" />
         <activity
             android:name=".Avvio"

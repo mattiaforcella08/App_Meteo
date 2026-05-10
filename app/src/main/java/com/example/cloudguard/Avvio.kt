@@ -1,5 +1,6 @@
 package com.example.cloudguard
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -26,8 +27,8 @@ class Avvio : AppCompatActivity() {
         Avvio.setOnClickListener {
 
             // Intent = passaggio da un activity all'altra
-            // val intent = Intent(this, );
-            // startActivity(intent);
+            val intent = Intent(this, Homepage::class.java);
+            startActivity(intent);
 
         }
 

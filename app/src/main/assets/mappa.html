@@ -10,19 +10,28 @@
 </head>
 <body>
 <div id="map"></div>
-<script>
-    // Inizializza la mappa su Roma
-    var map = L.map('map').setView([41.9028, 12.4964], 13);
 
+<!-- Dentro script mettiamo tutto il codice riguardante il JS -->
+<script>
+    // Inizializza la mappa in base alle coordinate che mettiamo
+    var map = L.map('map').setView([45.808667, 9.599889], 15);      // Coordinate e quanto deve essere zoomato
+
+    // Non ho ancora capito a cosa servono, ma sono FONDAMENTALI
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    // Funzione che potremo chiamare da Kotlin
-    function aggiungiMarker(lat, lng, testo) {
-        L.marker([lat, lng]).addTo(map).bindPopup(testo).openPopup();
-    }
+    // Aggiungiamo i nostri marker
+    var marker1 = L.marker([45.969806,9.648611]).addTo(map);
+
+    // Quando l'utente clicca sul marker, chiamiamo Kotlin passando i dati
+    marker1.on('click', function() {
+        if (window.Android) {
+            // Passiamo il nome della activity
+            window.Android.onMarkerClick("prova");
+        }
+    });
 </script>
 </body>
 </html>

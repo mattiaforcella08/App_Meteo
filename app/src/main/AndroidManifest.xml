@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Concedo il permesso per l'accesso a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,21 +14,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudGuard">
         <activity
+            android:name=".prova"
+            android:exported="false" />
+        <activity
             android:name=".Mappa"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Homepage"
             android:exported="false" />
         <activity
             android:name=".Avvio"
             android:exported="false">
+
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

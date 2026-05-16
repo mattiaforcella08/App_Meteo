@@ -25,12 +25,9 @@ class Avvio : AppCompatActivity() {
         Avvio = findViewById<Button>(R.id.BottoneAvvio);
 
         Avvio.setOnClickListener {
-
             // Intent = passaggio da un activity all'altra
             val intent = Intent(this, Homepage::class.java);
             startActivity(intent);
-
         }
-
     }
 }

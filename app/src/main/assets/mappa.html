@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body, html, #map { height: 100%; margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    // Inizializza la mappa su Roma
+    var map = L.map('map').setView([41.9028, 12.4964], 13);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Funzione che potremo chiamare da Kotlin
+    function aggiungiMarker(lat, lng, testo) {
+        L.marker([lat, lng]).addTo(map).bindPopup(testo).openPopup();
+    }
+</script>
+</body>
+</html>

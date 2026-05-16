@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Concedo il permesso per l'accesso a Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,16 +15,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudGuard">
         <activity
-            android:name=".Homepage"
-            android:exported="false" />
-        <activity
-            android:name=".Avvio"
-            android:exported="true">
+            android:name=".Mappa"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Homepage"
+            android:exported="false" />
+        <activity
+            android:name=".Avvio"
+            android:exported="false">
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
         </activity>
     </application>
 

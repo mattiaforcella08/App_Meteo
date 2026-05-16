@@ -19,6 +19,7 @@ class Homepage : AppCompatActivity() {
         val descrizione: TextView = findViewById(R.id.meteo_scritto)
         val btnAggiorna: Button = findViewById(R.id.btn_aggiorna)
 
+        // Array --> lista di opzioni disponibili
         val opzioniCitta = arrayOf("Roma", "Milano", "Napoli")
 
         // Colleghiamo le opzioni allo Spinner tramite un Adapter
@@ -34,9 +35,7 @@ class Homepage : AppCompatActivity() {
 
         btnAggiorna.setOnClickListener {
             val cittaSelezionata = spinner.selectedItem.toString()
-
             val info = datiMeteo[cittaSelezionata]
-
             if (info != null) {
                 icona.text = info.first
                 temperatura.text = info.second

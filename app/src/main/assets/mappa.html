@@ -26,11 +26,26 @@
     var marker1 = L.marker([45.969806,9.648611]).addTo(map);
 
     // Quando l'utente clicca sul marker, chiamiamo Kotlin passando i dati
-    marker1.on('click', function() {
+    markerOlmo.on('click', function() {
         if (window.Android) {
             // Passiamo il nome della activity
-            window.Android.onMarkerClick("prova");
+            window.Android.onMarkerClick("Olmo al Brembo");
         }
+    MarkerBrembilla.on('click', function() {
+        if (window.Android) {
+            window.Android.onMarkerClick("Brembilla");
+        }
+    });
+    MarkerValsecca.on('click', function() {
+        if (window.Android) {
+            window.Android.onMarkerClick("Valsecca");
+        }
+    });
+    MarkerAlme.on('click', function() {
+        if (window.Android) {
+            window.Android.onMarkerClick("Alme");
+        }
+    });
     });
 </script>
 </body>

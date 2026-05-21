@@ -14,7 +14,7 @@
 <!-- Dentro script mettiamo tutto il codice riguardante il JS -->
 <script>
     // Inizializza la mappa in base alle coordinate che mettiamo
-    var map = L.map('map').setView([45.808667, 9.599889], 15);      // Coordinate e quanto deve essere zoomato
+    var map = L.map('map').setView([45.855722, 9.569083], 11);      // Coordinate e quanto deve essere zoomato
 
     // Non ho ancora capito a cosa servono, ma sono FONDAMENTALI
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -23,13 +23,17 @@
     }).addTo(map);
 
     // Aggiungiamo i nostri marker
-    var marker1 = L.marker([45.969806,9.648611]).addTo(map);
+    var MarkerOlmo = L.marker([45.969806,9.648611]).addTo(map);
+    var MarkerBrembilla = L.marker([45.820694,9.596528]).addTo(map);
+    var MarkerValsecca = L.marker([45.826389,9.496667]).addTo(map);
+    var MarkerAlme = L.marker([45.740111,9.612139]).addTo(map);
+
 
     // Quando l'utente clicca sul marker, chiamiamo Kotlin passando i dati
-    markerOlmo.on('click', function() {
+    MarkerOlmo.on('click', function() {
         if (window.Android) {
             // Passiamo il nome della activity
-            window.Android.onMarkerClick("Olmo al Brembo");
+            window.Android.onMarkerClick("Olmo");
         }
     MarkerBrembilla.on('click', function() {
         if (window.Android) {

@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "Olmo al Brembo",
+    "temperatura": 10,
+    "descrizione": "Freddo"
+  },
+  {
+    "nome": "Valsecca",
+    "temperatura": 10,
+    "descrizione": "Freddo"
+  },
+  {
+    "nome": "Val Brembilla",
+    "temperatura": 15,
+    "descrizione": "Mite"
+  },
+  {
+    "nome": "Almè",
+    "temperatura": 30,
+    "descrizione": "Caldo"
+  }
+]

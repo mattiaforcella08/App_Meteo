@@ -1,5 +1,6 @@
 package com.example.cloudguard
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -18,6 +19,8 @@ class Homepage : AppCompatActivity() {
         val nome: TextView = findViewById(R.id.nome)
         val temperatura: TextView = findViewById(R.id.temperatura)
         val descrizione: TextView = findViewById(R.id.descrizione)
+        val emoji: TextView = findViewById(R.id.emoji)
+        val back: Button = findViewById(R.id.back)
 
         val cittaInput  = intent.getStringExtra("Destinazione")
         val listaCitta = leggiJson()
@@ -27,9 +30,17 @@ class Homepage : AppCompatActivity() {
         }
         if (info != null) {
             nome.text = info.nome
+            emoji.text = info.emoji
             temperatura.text = "${info.temperatura}°"
             descrizione.text = info.descrizione
         }
+
+        back.setOnClickListener {
+            val intent = Intent(this, Mappa::class.java)
+            startActivity(intent)
+        }
+
+
     }
     private fun leggiJson(): List<Citta> {
 

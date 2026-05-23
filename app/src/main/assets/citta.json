@@ -1,21 +1,25 @@
 [
   {
     "nome": "Olmo al Brembo",
+    "emoji": "❄️",
     "temperatura": 10,
     "descrizione": "Freddo"
   },
   {
     "nome": "Valsecca",
+    "emoji": "⛅",
     "temperatura": 10,
     "descrizione": "Freddo"
   },
   {
     "nome": "Val Brembilla",
+    "emoji": "🌤️",
     "temperatura": 15,
     "descrizione": "Mite"
   },
   {
     "nome": "Almè",
+    "emoji": "☀️",
     "temperatura": 30,
     "descrizione": "Caldo"
   }

@@ -31,26 +31,22 @@
 
     // Quando l'utente clicca sul marker, chiamiamo Kotlin passando i dati
     MarkerOlmo.on('click', function() {
-        if (window.Android) {
             // Passiamo il nome della activity
-            window.Android.onMarkerClick("Olmo");
-        }
+            window.Android.onMarkerClick("Olmo al Brembo");
     });
     MarkerBrembilla.on('click', function() {
-        if (window.Android) {
-            window.Android.onMarkerClick("Brembilla");
-        }
+            window.Android.onMarkerClick("Val Brembilla");
     });
     MarkerValsecca.on('click', function() {
-        if (window.Android) {
+
             window.Android.onMarkerClick("Valsecca");
-        }
     });
     MarkerAlme.on('click', function() {
-        if (window.Android) {
-            window.Android.onMarkerClick("Alme");
-        }
+
+        window.Android.onMarkerClick("Almè");
+
     });
+
 </script>
 </body>
 </html>

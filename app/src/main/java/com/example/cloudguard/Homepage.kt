@@ -15,28 +15,20 @@ class Homepage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homepage)
 
-        val spinner: Spinner = findViewById(R.id.menu_tendina)
+        val nome: TextView = findViewById(R.id.nome)
         val temperatura: TextView = findViewById(R.id.temperatura)
-        val descrizione: TextView = findViewById(R.id.meteo_scritto)
-        val btnAggiorna: Button = findViewById(R.id.btn_aggiorna)
+        val descrizione: TextView = findViewById(R.id.descrizione)
 
-        val leggiCitta = leggiJson()
-        val nomiCitta = leggiCitta.map{ it.nome }
+        val cittaInput  = intent.getStringExtra("Destinazione")
+        val listaCitta = leggiJson()
 
-
-        // Colleghiamo le opzioni allo Spinner tramite un Adapter
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, nomiCitta)
-        spinner.adapter = adapter
-
-        btnAggiorna.setOnClickListener {
-            val cittaSelezionata = spinner.selectedItem.toString()
-            val info = leggiCitta.find {
-                it.nome == cittaSelezionata
-            }
-            if (info != null) {
-                temperatura.text = "Temperatura: ${info.temperatura}°"
-                descrizione.text = info.descrizione
-            }
+        val info = listaCitta.find {
+            it.nome == cittaInput
+        }
+        if (info != null) {
+            nome.text = info.nome
+            temperatura.text = "${info.temperatura}°"
+            descrizione.text = info.descrizione
         }
     }
     private fun leggiJson(): List<Citta> {

@@ -34,11 +34,11 @@ class Mappa : AppCompatActivity() {
         fun onMarkerClick(dest: String,) {
             try {
                 // Settiamo la destinazione
-                val destinazione = Class.forName("com.example.cloudguard.Homepage")
+                val homepage = Class.forName("com.example.cloudguard.Homepage")
 
 
                 // Configurazione dell'Intent per aprire la nuova Activity
-                val intent = Intent(this@Mappa, destinazione)  //@Mappa serve pk se no kotlin nn sa se this si riferisce a activity o a webInterface
+                val intent = Intent(this@Mappa, homepage)  //@Mappa serve pk se no kotlin nn sa se this si riferisce a activity o a webInterface
 
                 intent.putExtra("Destinazione",dest);
 

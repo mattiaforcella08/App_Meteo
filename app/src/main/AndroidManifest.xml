@@ -13,44 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudGuard">
-        <activity
-            android:name=".Alme"
-            android:exported="false" />
-        <activity
-            android:name=".Valsecca"
-            android:exported="false" />
-        <activity
-            android:name=".Brembilla"
-            android:exported="false" />
-        <activity
-            android:name=".Olmo"
-            android:exported="false" />
-        <activity
-            android:name=".prova"
-            android:exported="false" />
+
         <activity
             android:name=".Mappa"
             android:exported="false" />
         <activity
             android:name=".Homepage"
+            android:exported="false"/>
+        <activity
+            android:name=".Avvio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".Avvio"
-            android:exported="false">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
     </application>
 

@@ -31,17 +31,16 @@ class Mappa : AppCompatActivity() {
     // Classe interna che riceve i dati inviati dal JavaScript di Leaflet
     inner class WebAppInterface {
         @JavascriptInterface
-        fun onMarkerClick(dest: String) {
+        fun onMarkerClick(dest: String,) {
             try {
                 // Settiamo la destinazione
-                val destinazione = Class.forName("com.example.cloudguard.$dest")
+                val destinazione = Class.forName("com.example.cloudguard.Homepage")
 
 
                 // Configurazione dell'Intent per aprire la nuova Activity
-                val intent = Intent(
-                    this@Mappa,
-                    destinazione
-                )  //@Mappa serve pk se no kotlin nn sa se this si riferisce a activity o a webInterface
+                val intent = Intent(this@Mappa, destinazione)  //@Mappa serve pk se no kotlin nn sa se this si riferisce a activity o a webInterface
+
+                intent.putExtra("Destinazione",dest);
 
                 // Avvio della nuova Activity
                 startActivity(intent)

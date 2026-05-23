@@ -26,7 +26,7 @@ class Avvio : AppCompatActivity() {
 
         Avvio.setOnClickListener {
             // Intent = passaggio da un activity all'altra
-            val intent = Intent(this, Homepage::class.java);
+            val intent = Intent(this, Mappa::class.java);
             startActivity(intent);
         }
     }
